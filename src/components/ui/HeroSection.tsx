@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from './button'
 import Image from 'next/image'
 import HeroImage from '../../assets/img/ImagenHero.png'
 import Pines from './Pines'

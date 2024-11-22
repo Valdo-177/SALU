@@ -1,12 +1,6 @@
 import { sendEmail } from "@/utils/mailMannager";
 import { NextResponse } from "next/server";
 
-interface IForm {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-}
 
 export async function POST(request: Request) {
   console.log('Datos que llegan - ', Request)

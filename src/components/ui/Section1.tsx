@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
 import imgSecction2 from '../../assets/img/imagsection2.png'
-import { Button } from './button'
 import { FormUser } from './FormUser'
 
 const Section1 = () => {
