@@ -9,7 +9,7 @@ const HeroSection = () => {
         <section className='sm:mt-[5rem] mt-[3rem] flex items-center flex-col gap-3'>
             <div className='flex flex-col sm:w-[max-content] gap-4 items-center'>
                 <h1 className='text-3xl lg:text-6xl font-light text-center sm:w-[max-content]'>Facilitamos tu acceso  <br /> a la <span className='font-bold text-bgPrimary'>salud que mereces</span></h1>
-                <p className='text-md text-textColor font-medium text-center'>Microcréditos y ahorro digital para que tus consultas 
+                <p className='text-md text-textColor font-medium text-center px-2 sm:px-0'>Microcréditos y ahorro digital para que tus consultas 
                     médicas y odontológicas sean más accesibles.</p>
                     <FormUser/>
             </div>
