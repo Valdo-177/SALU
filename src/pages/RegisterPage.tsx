@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStore } from "@/stores/useAuthStore ";
 import { useRouter } from "next/navigation";
 
-const LoginPage = () => {
+const RegisterPages = () => {
   const { login, loading, error } = useAuth();
   const setUser = useAuthStore((state) => state.setUser);
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -34,10 +34,18 @@ const LoginPage = () => {
     <div className="flex justify-center items-center h-screen bg-gray-100">
       <Card className="w-full max-w-sm shadow-lg">
         <CardHeader>
-          <CardTitle className="text-xl">Iniciar Sesión</CardTitle>
+          <CardTitle className="text-xl">Registro de usuarios</CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleLogin} className="space-y-4">
+            <Input
+              type="text"
+              name="name"
+              placeholder="Nombre del usuario"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
             <Input
               type="email"
               name="email"
@@ -65,7 +73,7 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default RegisterPages;
 
 
 
