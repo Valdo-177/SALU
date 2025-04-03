@@ -36,6 +36,7 @@ export default function LandingPage() {
     contact: true,
     promo: true,
   });
+  console.log(isVisible);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

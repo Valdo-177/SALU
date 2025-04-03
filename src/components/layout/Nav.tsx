@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
-import Image from "next/image";
 import LogoSalu from "@/assets/svg/Logo"
 import { scrollToSection } from "@/utils/scroolTo";
 

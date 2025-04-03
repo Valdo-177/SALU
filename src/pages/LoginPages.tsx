@@ -6,13 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAuthStore } from "@/stores/useAuthStore ";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
   const { login, loading, error } = useAuth();
   const setUser = useAuthStore((state) => state.setUser);
   const [formData, setFormData] = useState({ email: "", password: "" });
-  const { push } = useRouter()
+  // const { push } = useRouter()
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
