@@ -12,6 +12,15 @@ body {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+*::-webkit-scrollbar {
+  width: 0px;
+  display: none;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;

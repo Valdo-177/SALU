@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/layout/Nav";
 import { Toaster } from "sonner";
+import { Navbar } from "@/components/layout/Nav";
 
 const manrope = Manrope({ subsets: ["latin"] });
 
@@ -32,7 +32,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} antialiased bg-white text-black`}
       >
-        <Nav />
+        <Navbar />
         {children}
         <Toaster />
       </body>

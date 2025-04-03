@@ -22,11 +22,11 @@ const LoginPage = () => {
     e.preventDefault();
     const userLogin = await login(formData.email, formData.password);
     console.log('userLogin: ', userLogin)
-    if (userLogin?.role == "admin") {
-      push("/admin")
-    } else {
-      push("/")
-    }
+    // if (userLogin?.role == "admin") {
+    //   push("/admin")
+    // } else {
+    //   push("/")
+    // }
     setUser(userLogin || { email: '', name: '' });
   };
 
