@@ -14,7 +14,7 @@ const transport = createTransport({
 export type Sender = { name: string; email: string; }
 
 export const sendEmail = async (emailData: FormData) => {
-    const { email, fullName, gender, id, phone } = emailData;
+    const { email, fullName, phone } = emailData;
     await transport.sendMail({
         from: `"Solicitud de crédito SALU" <${email}>`,
         to: [email],
@@ -164,11 +164,9 @@ export const sendEmail = async (emailData: FormData) => {
             <h2>Asunto: Solicitud de microcrédito</h2>
             <p>Los datos recibidos fueron:</p>
             <ul>
-                <li><strong>Cédula de ciudadanía:</strong> ${id}</li>
                 <li><strong>Teléfono móvil:</strong> ${phone}</li>
                 <li><strong>Nombre completo:</strong> ${fullName}</li>
                 <li><strong>Correo electrónico:</strong> ${email}</li>
-                <li><strong>Género:</strong> ${gender}</li>
             </ul>
         </div>
     </main>

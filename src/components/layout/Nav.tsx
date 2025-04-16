@@ -4,12 +4,17 @@ import Link from "next/link";
 import { Menu } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Button } from "../ui/button";
-import LogoSalu from "@/assets/svg/Logo"
+import LogoSalu from "@/assets/svg/Logo";
 import { scrollToSection } from "@/utils/scroolTo";
+import { usePathname } from "next/navigation";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const path = usePathname();
+  const isDas = path?.includes("/admin");
+
+  console.log("isDas: ", isDas);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,7 +31,9 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`${
+        !isDas && "fixed"
+      } top-0 z-50 w-full transition-all duration-300 ${
         scrolled ? "bg-primary/95 backdrop-blur-md shadow-sm" : "bg-primary"
       }`}
     >
@@ -41,7 +48,7 @@ export function Navbar() {
           </div>
           <span>SALU</span> */}
           {/* <Image src={} alt="Logo de SALU"/> */}
-          <LogoSalu className="scale-[0.7]"/>
+          <LogoSalu className="scale-[0.7]" />
         </Link>
 
         <Button
@@ -90,8 +97,9 @@ export function Navbar() {
             Contacto
           </Link>
           <Button
-          onClick={()=> scrollToSection("contacto")}
-          className="md:ml-4 rounded-full bg-white text-black shadow-glow-accent hover:bg-white px-[1rem] py-1 h-9">
+            onClick={() => scrollToSection("contacto")}
+            className="md:ml-4 rounded-full bg-white text-black shadow-glow-accent hover:bg-white px-[1rem] py-1 h-9"
+          >
             Agenda tu cita
           </Button>
         </nav>

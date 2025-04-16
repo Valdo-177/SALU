@@ -18,7 +18,6 @@ import {
   Zap,
 } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Navbar } from "@/components/layout/Nav";
 import { Button } from "@/components/ui/button";
 import { scrollToSection } from "@/utils/scroolTo";
 import section1 from "@/assets/img/section1.jpeg"
@@ -36,6 +35,7 @@ export default function LandingPage() {
     contact: true,
     promo: true,
   });
+
   console.log(isVisible);
 
   useEffect(() => {
@@ -64,8 +64,6 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
-      <Navbar />
-
       {/* Hero Section */}
       <section
         id="hero"
