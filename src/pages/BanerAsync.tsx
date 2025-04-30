@@ -47,8 +47,9 @@ const BanerAsync = () => {
       <div className="w-full sm:w-auto px-5 sm:px-0 absolute z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center gap-20">
         <div className="flex flex-col items-center">
           <h1 className="text-4xl text-[#E0B2D3]">¡Estamos trabajando!</h1>
-          <p className="text-xl w-full sm:w-[70%] text-center text-[#DDE0EC]">
-            Para brindarte acceso a salud privada de calidad Muy pronto
+          <p className="text-xl w-full sm:w-[80%] text-center text-[#DDE0EC]">
+            Para brindarte acceso a salud privada de calidad.
+            <br /> Muy pronto
             estaremos en línea.
           </p>
         </div>
@@ -56,8 +57,8 @@ const BanerAsync = () => {
           <div className="flex flex-col items-center">
             <h2 className="text-2xl text-[#E0B2D3]">Déjanos tus datos</h2>
             <p className="text-xl w-full sm:w-[70%] text-center text-[#DDE0EC]">
-              y sé parte de los primeros en recibir atención médica ¡Nos vemos
-              el 18 de mayo!
+              y sé parte de los primeros en recibir atención médica <b>¡Nos vemos
+              el 18 de mayo!</b>
             </p>
           </div>
           <div className="flex items-center gap-3 w-full sm:w-[70%]">
