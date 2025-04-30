@@ -1,7 +1,7 @@
-import LandingPage from "@/pages/LandingPage";
+import BanerAsync from "@/pages/BanerAsync";
 
 export default function Home() {
   return (
-    <LandingPage/>
+    <BanerAsync/>
   );
 }
