@@ -35,7 +35,7 @@ const BanerAsync = () => {
       <Image
         src={bgBanner}
         alt="Fondo de imagen de SALU"
-        className="hidden sm:block h-full w-full object-cover border-blue-900 border-2"
+        className="hidden sm:block h-full w-full object-cover"
       />
 
       <Image

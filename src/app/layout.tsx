@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description: "una plataforma que ofrece microcréditos y opciones de ahorro digital para que las consultas médicas y odontológicas",
     type: "website",
     images: {
-      url: "https://firebasestorage.googleapis.com/v0/b/unidotaciones-f49fc.appspot.com/o/SaluPrevie.png?alt=media&token=4e25c1f5-a3da-4598-9126-caef75d7f50c",
+      url: "/previewSalu.png",
       width: "1200",
       height: "630",
     },
