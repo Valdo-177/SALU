@@ -1,9 +1,32 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { CreditApplicationProvider } from "@/contexts/CreditApplicationContext";
 
 const manrope = Manrope({ subsets: ["latin"] });
+
+const noken = localFont({
+  src: [
+    {
+      path: './fonts/Noken.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Nokenbold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Nokensemibold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-noken',
+});
 
 export const metadata: Metadata = {
   title: "SALU",
@@ -23,15 +46,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${manrope.className} antialiased bg-white text-black`}
-      >
-        {children}
+      <body>
+        <CreditApplicationProvider>
+          {children}
+        </CreditApplicationProvider>
         <Toaster />
       </body>
     </html>

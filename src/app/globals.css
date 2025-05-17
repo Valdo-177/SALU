@@ -85,3 +85,132 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --primary: 240 64% 15%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 260 30% 75%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --accent: 350 80% 80%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 84% 4.9%;
+  --radius: 1rem;
+}
+
+body {
+  @apply bg-white text-primary antialiased;
+}
+
+.bg-pattern {
+  background-image: url("/images/background-pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.progress-dot {
+  @apply w-4 h-4 rounded-full border-2 border-primary;
+}
+
+.progress-dot.active {
+  @apply bg-primary;
+}
+
+.progress-dot.inactive {
+  @apply bg-transparent;
+}
+
+.form-input {
+  @apply w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary;
+}
+
+.form-select {
+  @apply w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-secondary;
+}
+
+.btn-primary {
+  @apply flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-secondary text-primary font-medium transition-all hover:bg-opacity-90;
+}
+
+.btn-secondary {
+  @apply text-primary underline font-medium;
+}
+
+.shape-blob {
+  @apply absolute bg-secondary opacity-70 rounded-full z-0;
+}
+
+.calendar-day {
+  @apply flex items-center justify-center w-10 h-10 rounded-full cursor-pointer transition-all;
+}
+
+.calendar-day.available {
+  @apply hover:bg-secondary hover:bg-opacity-30;
+}
+
+.calendar-day.unavailable {
+  @apply text-gray-400 cursor-not-allowed;
+}
+
+.calendar-day.selected {
+  @apply bg-secondary text-white;
+}
+
+.calendar-day.today {
+  @apply border-2 border-primary;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-container {
+  @apply container mx-auto px-4 py-6 md:py-8 flex flex-col min-h-screen z-10;
+}
+
+.content-container {
+  @apply flex flex-col md:flex-row items-center justify-between flex-grow gap-6 md:gap-10;
+}
+
+.form-container {
+  @apply w-full md:w-1/2 max-w-md mx-auto md:ml-auto md:mr-0;
+}
+
+.illustration-container {
+  @apply w-full md:w-1/2 flex justify-center md:justify-start items-center;
+}
+
+.modal {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4;
+}
+
+.modal-content {
+  @apply bg-white rounded-2xl p-6 max-w-md w-full;
+  max-height: 90vh;
+  overflow-y: auto;
+}

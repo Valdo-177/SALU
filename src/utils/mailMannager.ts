@@ -177,3 +177,41 @@ export const sendEmail = async (emailData: FormData) => {
     `,
     });
 };
+
+export const sendVerificationEmail = async (email: string, code: string) => {
+  await transport.sendMail({
+    from: '"SALU Verificación" <noreply@salu.com>',
+    to: [email],
+    subject: "Código de verificación SALU",
+    html: `
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body { font-family: "Raleway", sans-serif; }
+            .code { 
+                font-size: 32px; 
+                font-weight: bold;
+                letter-spacing: 8px;
+                color: #333;
+                padding: 20px;
+                background: #f5f5f5;
+                border-radius: 8px;
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="containerInfo">
+            <h1>Código de Verificación</h1>
+            <p>Tu código de verificación es:</p>
+            <div class="code">${code}</div>
+            <p>Este código expirará en 30 minutos.</p>
+            <p>Si no solicitaste este código, puedes ignorar este correo.</p>
+        </div>
+    </body>
+    </html>
+    `
+  });
+};

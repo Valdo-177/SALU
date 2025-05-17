@@ -60,6 +60,10 @@ const config = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        "caret-blink": {
+          "0%,70%,100%": { opacity: "1" },
+          "20%,50%": { opacity: "0" },
+        },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
@@ -83,6 +87,7 @@ const config = {
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
+        "caret-blink": "caret-blink 1.25s ease-out infinite",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
         "fade-up": "fade-up 0.7s ease-out",
