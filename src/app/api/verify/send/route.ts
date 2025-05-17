@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/firebase/config";
-import { collection, addDoc, query, where, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, addDoc, } from "firebase/firestore";
 import { sendVerificationEmail } from "@/utils/mailMannager";
 
 function generateCode(): string {

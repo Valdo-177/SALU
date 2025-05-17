@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
 import { db } from "@/lib/firebase/config";
 import { toast } from "sonner";
@@ -42,7 +42,7 @@ export function CreditApplicationProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [currentStep, setCurrentStep] = useState(5);
+  const [currentStep, setCurrentStep] = useState(2);
   const { sendVerificationCode } = useVerification();
   const [formData, setFormData] = useState(initFormData);
   const [applicationId, setApplicationId] = useState<string | null>(null);
@@ -131,6 +131,7 @@ export function CreditApplicationProvider({
 
           // Si tiene proceso incompleto
           setApplicationId(existingApp.id);
+          //@ts-expect-error error de tipos
           setFormData(existingData);
           setCurrentStep(nextStep);
           toast.info(

@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { db } from "@/lib/firebase/config";
-import { collection, query, where, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, query, where, getDocs, deleteDoc } from "firebase/firestore";
 
-export async function POST(request: Request) {
+export async function POST() {
   try {
     const now = new Date();
     

@@ -117,7 +117,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
 }
@@ -190,11 +189,11 @@ body {
 }
 
 .page-container {
-  @apply container mx-auto px-4 py-6 md:py-8 flex flex-col min-h-screen z-10;
+  @apply container mx-auto px-4 py-6 md:py-8 flex flex-col z-10;
 }
 
 .content-container {
-  @apply flex flex-col md:flex-row items-center justify-between flex-grow gap-6 md:gap-10;
+  @apply flex md:flex-row items-center justify-between flex-grow gap-6 md:gap-10;
 }
 
 .form-container {
@@ -202,7 +201,7 @@ body {
 }
 
 .illustration-container {
-  @apply w-full md:w-1/2 flex justify-center md:justify-start items-center;
+  @apply w-full md:w-1/2 justify-center md:justify-start items-center;
 }
 
 .modal {

@@ -95,7 +95,7 @@ export default function MedicalSpecialtyPage({
 
       <div className="w-full relative z-20 max-w-7xl mx-auto py-6 sm:py-8 h-screen flex items-center">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full">
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
+          <div className="w-full md:w-1/2 hidden sm:flex justify-center md:justify-start order-2 md:order-1">
             <div className="relative z-10">
               <Image
                 src={user}

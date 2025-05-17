@@ -105,19 +105,19 @@ export default function PersonalInfoPage({
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex mt-[4rem] sm:mt-0 flex-col fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
       <BackgroundShapes />
 
       <div className="w-full relative z-20 max-w-7xl mx-auto py-6 sm:py-8 h-screen flex items-center">
         <div className="flex flex-col md:flex-row  items-center justify-between gap-8 md:gap-12 w-full">
-          <div className="w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
+          <div className="w-full md:w-1/2 hidden sm:flex justify-center md:justify-start sm:pl-[3rem] 2xl:pl-0 order-2 md:order-1">
             <div className="relative z-10">
               <Image
                 src={user}
                 alt="Ilustración médica"
                 width={400}
                 height={400}
-                className="object-contain w-full h-auto max-w-[280px] sm:max-w-[320px] md:max-w-[400px]"
+                className="object-contain w-full h-auto max-w-[280px] sm:max-w-[200px] 2xl:max-w-[400px]"
                 priority
               />
             </div>

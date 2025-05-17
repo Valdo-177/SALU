@@ -13,6 +13,7 @@ import {
   InputOTPSeparator,
   InputOTPSlot,
 } from "./ui/input-otp";
+import BackgroundShapes from "./background-shapes";
 
 interface VerificationPageProps {
   formData: any;
@@ -74,6 +75,7 @@ export default function VerificationPage({
         startTimer();
       } catch (error) {
         // Error manejado por el hook
+        console.error("Error al reenviar el código:", error);
       }
     }
   };
@@ -85,13 +87,15 @@ export default function VerificationPage({
       onNext();
     } catch (error) {
       // Error manejado por el hook
+      console.error("Error al reenviar el código:", error);
     }
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-[100dvh] flex flex-col justify-center fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
+      <BackgroundShapes />
       <div className="page-container w-full max-w-7xl mx-auto py-6 sm:py-8">
-        <div className="content-container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        <div className="content-container flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
           <div className="illustration-container w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
             <div className="relative z-10">
               <Image
@@ -114,8 +118,8 @@ export default function VerificationPage({
               {formData.email}
             </p>
 
-            <form onSubmit={handleSubmit} className="mt-6 sm:mt-8">
-              <div className="mb-8">
+            <form onSubmit={handleSubmit} className="mt-4 sm:mt-8">
+              <div className="sm:mb-8 mb-4">
                 <div className="flex justify-center md:justify-end gap-2 sm:gap-3">
                   <InputOTP
                     maxLength={4}
@@ -123,13 +127,25 @@ export default function VerificationPage({
                     onChange={handleCodeChange}
                   >
                     <InputOTPGroup>
-                      <InputOTPSlot index={0} className="h-[4rem] w-[4rem]" />
-                      <InputOTPSlot index={1} className="h-[4rem] w-[4rem]" />
+                      <InputOTPSlot
+                        index={0}
+                        className="h-[3rem] w-[3rem] sm:h-[4rem] sm:w-[4rem] border-gray-500"
+                      />
+                      <InputOTPSlot
+                        index={1}
+                        className="h-[3rem] w-[3rem] sm:h-[4rem] sm:w-[4rem] border-gray-500"
+                      />
                     </InputOTPGroup>
                     <InputOTPSeparator />
                     <InputOTPGroup>
-                      <InputOTPSlot index={2} className="h-[4rem] w-[4rem]" />
-                      <InputOTPSlot index={3} className="h-[4rem] w-[4rem]" />
+                      <InputOTPSlot
+                        index={2}
+                        className="h-[3rem] w-[3rem] sm:h-[4rem] sm:w-[4rem] border-gray-500"
+                      />
+                      <InputOTPSlot
+                        index={3}
+                        className="h-[3rem] w-[3rem] sm:h-[4rem] sm:w-[4rem] border-gray-500"
+                      />
                     </InputOTPGroup>
                   </InputOTP>
                 </div>

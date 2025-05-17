@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "./logo";
 import user from "@/assets/svg/Credito1.svg";
 import BackgroundShapes from "./background-shapes";
 import logo from "@/assets/svg/SaluLogo.svg";
@@ -12,9 +11,10 @@ interface LandingPageProps {
 
 export default function LandingPage({ onNext }: LandingPageProps) {
   return (
-    <div className="relative sm:min-h-screen sm:max-h-screen h-full flex flex-col justify-center fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
-      <div className="page-container w-full max-w-7xl mx-auto">
-        <div className="content-container flex flex-col-reverse md:flex-row items-center justify-center sm:justify-between gap-8 md:gap-12">
+    <div className="relative sm:min-h-screen sm:max-h-screen h-[100dvh] flex flex-col justify-center fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
+      <BackgroundShapes />
+      <div className="page-container w-full h-full max-w-7xl mx-auto">
+        <div className="content-container flex flex-col md:flex-row items-center justify-around sm:justify-between gap-8 md:gap-12">
           <div className="illustration-container w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="relative z-10">
               <Image
@@ -28,7 +28,7 @@ export default function LandingPage({ onNext }: LandingPageProps) {
             </div>
           </div>
 
-          <div className="form-container w-full text-center md:text-right border border-red-800">
+          <div className="form-container w-full text-center md:text-right">
             <div className="flex items-center md:items-end flex-col mb-8 md:mb-12">
               <Image
                 src={logo}

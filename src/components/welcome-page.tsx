@@ -88,19 +88,19 @@ export default function WelcomePage({
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-[100dvh] flex flex-col justify-center fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
       <BackgroundShapes />
 
-      <div className="page-container w-full max-w-7xl mx-auto py-6 sm:py-8">
-        <div className="content-container flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-          <div className="illustration-container w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1">
+      <div className="page-container self-center w-full max-w-7xl mx-auto py-6 sm:py-8">
+        <div className="content-container flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-12">
+          <div className="hidden sm:flex illustration-container w-full md:w-1/2 justify-center md:justify-start order-2 md:order-1">
             <div className="relative z-10">
               <Image
                 src={user}
                 alt="Paciente en silla de ruedas con médico"
                 width={400}
                 height={400}
-                className="object-contain w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px]"
+                className="object-contain w-full h-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] 2xl:max-w-[600px]"
                 priority
               />
             </div>
@@ -110,10 +110,10 @@ export default function WelcomePage({
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-accent mb-4">
               BIENVENIDO
             </h1>
-            <p className="text-base sm:text-lg md:text-xl mb-2">
+            <p className="text-base sm:text-lg md:text-xl sm:mb-2">
               Te enviaremos un código por correo electrónico
             </p>
-            <p className="text-base sm:text-lg md:text-xl mb-6">
+            <p className="text-base sm:text-lg md:text-xl sm:mb-6">
               para ingresar a <span className="font-bold">SALU</span>
             </p>
 
