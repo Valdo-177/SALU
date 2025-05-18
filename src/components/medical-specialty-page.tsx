@@ -140,7 +140,7 @@ export default function MedicalSpecialtyPage({
                   </Select>
                 </div>
 
-                <div className="col-span-2">
+                {/* <div className="col-span-2">
                   <label className="block text-sm font-medium mb-1">
                     Fecha y Hora de Cita
                   </label>
@@ -167,7 +167,7 @@ export default function MedicalSpecialtyPage({
                       Selecciona una hora haciendo clic en el campo
                     </p>
                   )}
-                </div>
+                </div> */}
 
                 <div className="col-span-2">
                   <h3 className="text-xl font-medium mb-4">

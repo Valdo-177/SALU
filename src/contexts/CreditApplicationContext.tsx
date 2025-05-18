@@ -27,7 +27,6 @@ const initFormData = {
   birthDate: "",
   position: "",
   specialty: "",
-  appointmentDate: "",
   appointmentTime: "",
   discountCode: "",
   advisorCode: "",
@@ -42,7 +41,7 @@ export function CreditApplicationProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [currentStep, setCurrentStep] = useState(2);
+  const [currentStep, setCurrentStep] = useState(0);
   const { sendVerificationCode } = useVerification();
   const [formData, setFormData] = useState(initFormData);
   const [applicationId, setApplicationId] = useState<string | null>(null);
@@ -87,7 +86,7 @@ export function CreditApplicationProvider({
       !data.phoneNumber
     )
       return 3; // Personal Info
-    if (!data.specialty || !data.appointmentDate) return 4; // Medical Specialty
+    if (!data.specialty) return 4; // Medical Specialty
 
     return 5; // Processing
   };
