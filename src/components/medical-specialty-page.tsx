@@ -5,7 +5,7 @@ import { useState } from "react";
 import Image from "next/image";
 import user from "@/assets/svg/Credito5.svg";
 import BackgroundShapes from "./background-shapes";
-import { ChevronRight, HelpCircle, Calendar } from "lucide-react";
+import { ChevronRight, HelpCircle } from "lucide-react";
 import DatePicker from "./date-picker";
 import AppointmentPicker from "./appointment-picker";
 import { Input } from "./ui/input";
@@ -74,20 +74,20 @@ export default function MedicalSpecialtyPage({
     updateFormData({ appointmentTime: time });
   };
 
-  const formatDate = (date: Date | null) => {
-    if (!date) return "";
-    return date.toLocaleDateString("es-ES", {
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-    });
-  };
+  // const formatDate = (date: Date | null) => {
+  //   if (!date) return "";
+  //   return date.toLocaleDateString("es-ES", {
+  //     day: "2-digit",
+  //     month: "2-digit",
+  //     year: "numeric",
+  //   });
+  // };
 
-  const formatAppointment = () => {
-    if (!appointmentDate) return "";
-    const dateStr = formatDate(appointmentDate);
-    return appointmentTime ? `${dateStr} - ${appointmentTime}` : dateStr;
-  };
+  // const formatAppointment = () => {
+  //   if (!appointmentDate) return "";
+  //   const dateStr = formatDate(appointmentDate);
+  //   return appointmentTime ? `${dateStr} - ${appointmentTime}` : dateStr;
+  // };
 
   return (
     <div className="relative min-h-screen flex flex-col fade-in overflow-hidden px-4 sm:px-6 lg:px-8">
